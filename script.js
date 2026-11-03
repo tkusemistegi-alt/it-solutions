@@ -11,4 +11,3 @@ function setLanguage(lang) {
 }
 langSwitch.addEventListener('click', () => setLanguage(currentLang === 'ru' ? 'kk' : 'ru'));
 document.getElementById('year').textContent = new Date().getFullYear();
-// Before publishing, replace the email link in index.html with the owner's real WhatsApp or email.
