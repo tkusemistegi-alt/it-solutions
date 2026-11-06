@@ -1,7 +1,7 @@
 (function(){
   var box=document.getElementById('lightbox');if(!box)return;
   var big=box.querySelector('img'),list=[],i=0;
-  function show(n){i=(n+list.length)%list.length;big.src=list[i].src;big.alt=list[i].alt}
+  function show(n){i=(n+list.length)%list.length;big.src=list[i].dataset.full || list[i].src;big.alt=list[i].alt}
   function close(){box.classList.remove('open')}
   document.querySelectorAll('.shots').forEach(function(row){
     var imgs=[].slice.call(row.querySelectorAll('img'));
